@@ -40,3 +40,4 @@ Route::get('category-edit/{id}', [CategoryController::class,'edit'])->name('cate
 Route::post('category-store', [CategoryController::class,'store'])->name('category.store');
 Route::put('category-update/{category}', [CategoryController::class, 'update'])->name('category.update');
 Route::delete('category-destroy/{id}', [CategoryController::class,'destroy'])->name('category.destroy');
+Route::post('category-restore/{id}', [CategoryController::class,'restore'])->name('category.restore');

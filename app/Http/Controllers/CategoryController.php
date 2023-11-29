@@ -104,4 +104,10 @@ class CategoryController extends Controller
     return redirect(route('category'))->with('success', 'Category updated successfully');
 }
 
+public function restore($id) 
+{
+    $category = Category::withTrashed()->find($id)->restore();
+    return redirect(route('category'))->with('success', 'Category updated successfully');
+}
+
 }

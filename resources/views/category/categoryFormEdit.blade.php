@@ -6,7 +6,7 @@
 
         <x-validation-errors class="mb-4" />
 
-        <form method="POST" action="{{ route('category.update', ['category' => $category]) }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('category.update', ['category' => $category]) }}" enctype="multipart/form-data" onsubmit="return confirm('Confirm changes?')">
             @csrf
             @method('PUT')
             <div>

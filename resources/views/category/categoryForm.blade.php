@@ -6,7 +6,7 @@
 
         <x-validation-errors class="mb-4" />
 
-        <form method="POST" action="{{ route('category.store') }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('category.store') }}" enctype="multipart/form-data" onsubmit="return confirm('Are you sure you want to add this category?')">
             @csrf
 
             <div>
